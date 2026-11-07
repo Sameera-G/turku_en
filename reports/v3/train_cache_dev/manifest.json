@@ -1,0 +1,7 @@
+{
+  "mode": "dev",
+  "train_rows": 93780,
+  "features": 221,
+  "test_start_utc": "2026-10-04T21:00:00Z",
+  "validation_start_utc": "2026-09-06T21:00:00Z"
+}

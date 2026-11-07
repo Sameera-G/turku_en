@@ -1,0 +1,28 @@
+{
+  "rows": 55,
+  "origins": 5,
+  "days": 14,
+  "champion_version": "10.1-production-refit-robust-fusion",
+  "candidate_version": "11.0-strong-p50-live-candidate",
+  "champion_metrics": {
+    "mae": 15.455210117796852,
+    "pinball": 7.6123426967837835,
+    "coverage": 0.6,
+    "direction_brier": 0.45421530455059544,
+    "spike_brier": 0.006860831954442505
+  },
+  "candidate_metrics": {
+    "mae": 21.975331753445214,
+    "pinball": 7.6123426967837835,
+    "coverage": 0.6,
+    "direction_brier": 0.45421530455059544,
+    "spike_brier": 0.006860831954442505
+  },
+  "composite_gain": -0.15820202991304777,
+  "mae_gain": -0.42187207976812724,
+  "regressions": [
+    "mae"
+  ],
+  "metric_gate_eligible": false,
+  "enough_origins_to_promote": false
+}

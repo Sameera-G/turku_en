@@ -1,0 +1,24 @@
+V9 replacement files (extract over an existing V8 project):
+.env.example
+README.md
+README_V9.md
+V9_REPLACE_FILES.txt
+docs/V9_MCP_CALIBRATION_EXPLAINABILITY.md
+src/config.py
+src/features.py
+src/explainability.py
+src/api/app.py
+src/dashboard/app.py
+src/online/adaptive.py
+src/online/continuous.py
+src/online/datasets.py
+src/online/entsoe_mcp.py
+src/online/market_state.py
+src/online/sources.py
+scripts/online_status.py
+scripts/run_online_daemon.py
+scripts/test_entsoe_mcp.py
+tests/test_v9_system.py
+reports/v9/official_validation_recheck/score_summary.md
+reports/v9/official_validation_recheck/score_summary.csv
+reports/v9/official_validation_recheck/score_by_horizon.csv

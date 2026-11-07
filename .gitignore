@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+models/*.joblib
+outputs/*
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+starter_package_v1.zip
+.env
+data/online/
+data/raw/live/
+models/online/
+outputs/online/
+reports/online/

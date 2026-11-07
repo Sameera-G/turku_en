@@ -1,0 +1,35 @@
+TE-BalanceAI V2 replacement/addition set
+
+REPLACE:
+  src/config.py
+  src/data.py
+  src/features.py
+  src/models.py
+
+ADD:
+  scripts/train_v2.py
+  scripts/generate_backtest_v2.py
+  scripts/audit_walk_forward.py
+  scripts/run_v2_pipeline.py
+  tests/test_v2_constraints.py
+
+RUN AFTER COPYING:
+  python scripts/run_v2_pipeline.py
+
+OUTPUTS:
+  models/v2/model_bundle_v2.joblib
+  reports/v2/validation_metrics.csv
+  reports/v2/validation_by_horizon.csv
+  reports/v2/calibration_summary.json
+  reports/v2/walk_forward_audit.csv
+  reports/v2/official_validation/score/score_summary.csv
+  reports/v2/official_validation/score/score_by_horizon.csv
+  outputs/v2/forecast_backtest_v2.csv
+
+FAST ITERATION (recommended first):
+  python scripts/train_v2.py
+  python scripts/generate_backtest_v2.py
+
+FINAL-CANDIDATE REFIT (slower):
+  python scripts/train_v2.py --refit-all
+  python scripts/generate_backtest_v2.py

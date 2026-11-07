@@ -1,0 +1,11 @@
+horizon_hour,step_first,step_last,rows_scored_price,mae_p50,pinball_p10,pinball_p50,pinball_p90,calibration_pinball_mean,coverage_p10_p90,rows_scored_spike,brier_spike_high,brier_spike_low,brier_spike_mean,observed_spike_high_share,observed_spike_low_share,rows_scored_direction,brier_direction
+1,1,4,0,,,,,,,0,,,,,,0,
+2,5,8,0,,,,,,,0,,,,,,0,
+3,9,12,0,,,,,,,0,,,,,,0,
+4,13,16,0,,,,,,,0,,,,,,0,
+5,17,20,0,,,,,,,0,,,,,,0,
+6,21,24,0,,,,,,,0,,,,,,0,
+7,25,28,0,,,,,,,0,,,,,,0,
+8,29,32,0,,,,,,,0,,,,,,0,
+9,33,36,0,,,,,,,0,,,,,,0,
+10,37,40,0,,,,,,,0,,,,,,0,

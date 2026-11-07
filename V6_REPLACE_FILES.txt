@@ -1,0 +1,24 @@
+TE-BalanceAI V6 replacement files (apply over V5 and keep your existing data/models/online history):
+
+.env.example
+README.md
+README_V6.md
+V6_REPLACE_FILES.txt
+docs/V6_FULL_SYSTEM.md
+src/config.py
+src/features.py
+src/api/app.py
+src/dashboard/app.py
+src/online/adaptive.py
+src/online/continuous.py
+src/online/fmi.py
+src/online/openmeteo.py
+src/online/retrain.py
+src/online/sources.py
+src/online/market_state.py
+scripts/online_status.py
+scripts/run_online_cycle.py
+scripts/run_online_daemon.py
+tests/test_v6_system.py
+
+Do NOT overwrite data/online, models/online, outputs/online, your .env, or the licensed starter-package data.

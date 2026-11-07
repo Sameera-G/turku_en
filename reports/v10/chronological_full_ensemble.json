@@ -1,0 +1,10 @@
+{
+  "test_rows": 6720,
+  "method": "development + first half of validation used for refit training; next quarter used for calibration; final quarter held out for evaluation",
+  "old_v8_fair_mae_eur_mwh": 34.156161460085684,
+  "v10_refit_direct_mae_eur_mwh": 30.906898971413355,
+  "v10_refit_spread_mae_eur_mwh": 31.83412756306251,
+  "v10_robust_50_50_mae_eur_mwh": 30.81810116508011,
+  "relative_reduction_vs_old_v8_pct": 9.772937450557416,
+  "note": "The old step-specific final P50 calibration was not reused because it worsened the unseen holdout after refitting. The production bundle uses a neutral 50/50 direct-spread centre, zero static intercept, and online adaptation from settled outcomes."
+}

@@ -1,0 +1,59 @@
+TE-BalanceAI V3.1 DROP-IN REPLACEMENT
+
+V3.1 keeps V2's leakage-safe walk-forward/calibration design and adds:
+- LightGBM + CatBoost horizon-specific P50 late fusion
+- financial-statement-informed market-regime features
+- cross-border capacity stress and flow reversal
+- stronger renewable/load ramp features
+- Nordic neighbour-market pressure proxy
+- flexible-load/electric-boiler regime signal
+- model disagreement, data-missingness and OOD reliability signals
+- deterministic business driver explanations
+- safer isolated model-worker training
+- optional API-key security + security headers
+- regional live weather context (dashboard only)
+
+REPLACE:
+  requirements.txt
+  .env.example
+  README.md
+  src/config.py
+  src/features.py
+  src/models.py
+  src/api/app.py
+  src/dashboard/app.py
+  scripts/download_public_context.py
+  scripts/train_v3.py
+  scripts/run_v3_pipeline.py
+
+ADD:
+  scripts/prepare_v3.py
+  scripts/model_worker_v3.py
+  scripts/finalize_v3.py
+  scripts/generate_backtest_v3.py
+  scripts/run_v3.ps1
+  scripts/run_v3_final.ps1
+  scripts/run_v3.sh
+  scripts/compare_v2_v3.py
+  tests/test_v3_constraints.py
+  docs/V3_MARKET_LOGIC.md
+
+DO NOT DELETE/REPLACE:
+  data/raw/starter_package_v1/
+  the organizer's locked validator/scorer
+
+WINDOWS DEVELOPMENT RUN:
+  pip install -r requirements.txt
+  python -m pytest -q tests/test_v3_constraints.py tests/test_v2_constraints.py tests/test_feature_legality.py
+  powershell -ExecutionPolicy Bypass -File scripts/run_v3.ps1
+
+The final CSV will be:
+  outputs/v3/forecast_backtest_v3.csv
+
+FINAL REFIT after you decide V3 is the candidate:
+  powershell -ExecutionPolicy Bypass -File scripts/run_v3_final.ps1
+
+Optional live weather context:
+  python scripts/download_public_context.py --live
+
+Never publish data/raw/starter_package_v1/data/spot_nordpool.csv.

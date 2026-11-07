@@ -1,0 +1,24 @@
+TE-BalanceAI V5 replacement set
+
+Replace/add these files over V4:
+- .env.example
+- README.md
+- README_V5.md
+- docs/V5_FULL_SYSTEM.md
+- src/config.py
+- src/features.py
+- src/online/continuous.py
+- src/online/entsoe.py
+- src/online/fmi.py
+- src/online/openmeteo.py
+- src/online/sources.py
+- src/online/retrain.py
+- src/api/app.py
+- src/dashboard/app.py
+- scripts/run_online_cycle.py
+- scripts/run_online_daemon.py
+- scripts/run_online_daemon.ps1
+- scripts/online_status.py
+- tests/test_v5_system.py
+
+Do NOT delete your data/raw/starter_package_v1 directory or V3 model bundle.

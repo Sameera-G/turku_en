@@ -1,0 +1,30 @@
+TE-BalanceAI V4 replacement set
+===============================
+
+Replace/update:
+  src/config.py
+  src/data.py
+  src/api/app.py
+  .env.example
+  .gitignore
+
+Add:
+  src/online/__init__.py
+  src/online/datasets.py
+  src/online/fingrid.py
+  src/online/entsoe.py
+  src/online/store.py
+  src/online/adaptive.py
+  src/online/retrain.py
+  src/online/continuous.py
+  scripts/run_online_cycle.py
+  scripts/run_online_daemon.py
+  scripts/retrain_online.py
+  scripts/online_status.py
+  scripts/run_online.ps1
+  scripts/run_online_daemon.ps1
+  tests/test_online_learning.py
+  docs/V4_CONTINUOUS_LEARNING.md
+  README_V4.md
+
+V4 is production-only continuous learning. Keep all V3 challenge/backtest files.

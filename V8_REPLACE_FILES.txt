@@ -1,0 +1,45 @@
+TE-BalanceAI V8 replacement set
+===============================
+
+Extract this ZIP over the existing V7 project. Keep your existing .env, data/raw,
+data/online database, models and outputs unless you intentionally want a clean reset.
+
+Changed/new files:
+.env.example
+README.md
+README_V8.md
+V8_REPLACE_FILES.txt
+docs/V8_MODEL_DATA_AND_SELF_LEARNING.md
+scripts/accuracy_report.py
+scripts/compare_v3_v8.py
+scripts/generate_backtest_v8.py
+scripts/run_v8.ps1
+scripts/run_v8.sh
+scripts/smoke_test_self_learning_v8.py
+scripts/system_check.py
+scripts/train_v8.py
+src/config.py
+src/dashboard/app.py
+src/features.py
+src/models_v8.py
+src/performance.py
+src/v8_features.py
+src/online/adaptive.py
+src/online/continuous.py
+src/online/datasets.py
+src/online/public_spot.py
+src/online/retrain.py
+src/online/sources.py
+src/online/store.py
+tests/test_v5_system.py
+tests/test_v8_system.py
+data/online/manual_spot_template.csv
+
+After replacement:
+1) activate .venv and set PYTHONPATH to project root
+2) powershell -ExecutionPolicy Bypass -File scripts/run_v8.ps1
+3) python scripts/compare_v3_v8.py
+4) python scripts/smoke_test_self_learning_v8.py --origins 10
+5) python -m pytest -q tests/test_v8_system.py tests/test_v7_performance.py tests/test_v6_system.py tests/test_online_learning.py tests/test_v5_system.py tests/test_v3_constraints.py tests/test_v2_constraints.py tests/test_feature_legality.py
+6) python scripts/run_online_cycle.py --no-retrain
+7) python -m streamlit run src/dashboard/app.py

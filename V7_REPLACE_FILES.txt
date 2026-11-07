@@ -1,0 +1,22 @@
+TE-BalanceAI V7 replacement files
+
+REPLACE:
+  src/config.py
+  src/dashboard/app.py
+  src/api/app.py
+  src/online/continuous.py
+  scripts/run_online_daemon.py
+  scripts/online_status.py
+  .env.example
+
+ADD:
+  src/performance.py
+  src/online/daily.py
+  scripts/run_daily_learning.py
+  scripts/accuracy_report.py
+  tests/test_v7_performance.py
+  README_V7.md
+  docs/V7_ACCURACY_AND_DAILY_LEARNING.md
+  V7_REPLACE_FILES.txt
+
+Keep your existing .env, data/, models/, outputs/, reports/ and official starter package.

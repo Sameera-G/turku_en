@@ -1,0 +1,8 @@
+{
+  "version": "11.0-strong-p50-live-candidate",
+  "training_rows": 120660,
+  "training_through": "2026-10-04 legal labels",
+  "status": "challenger_only_not_default",
+  "p50_recipe": "strong LGBM median 75% + strong CatBoost median 25%; V8 spread centre retained with 90% direct / 10% spread",
+  "promotion_rule": "must beat current champion on later settled live evaluation with enough origins"
+}

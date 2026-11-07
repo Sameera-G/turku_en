@@ -1,0 +1,30 @@
+{
+  "version": "10.1-production-refit-robust-fusion",
+  "training_rows": 120660,
+  "dev_rows": 93780,
+  "added_recent_legal_rows": 26880,
+  "training_through": "public validation labels through 2026-10-04; intended for post-cutoff/live production",
+  "locked_official_validation_mae_eur_mwh": 43.407385134986214,
+  "chronological_refit_experiment": {
+    "method": "train on dev + first half of validation; calibrate on next quarter; evaluate on final quarter",
+    "old_direct_mae_eur_mwh": 32.247,
+    "refit_direct_mae_eur_mwh": 30.9069,
+    "relative_mae_reduction_pct": 4.16
+  },
+  "alternative_model_benchmarks": {
+    "xgboost_absolute_error_full_validation_mae_eur_mwh": 47.2122,
+    "xgboost_squared_error_full_validation_mae_eur_mwh": 46.3434,
+    "stronger_lightgbm_spread_full_validation_mae_eur_mwh": 44.02,
+    "stronger_direction_lightgbm_brier": 0.4465,
+    "current_direction_brier": 0.4214,
+    "conclusion": "Additional algorithms/capacity did not consistently beat the market-structured V8 champion; recent-data refit was the more robust improvement."
+  },
+  "warning": "Do not rescore the V10 full-refit model on the public validation window as an unbiased test because those labels are now part of training. The locked 43.4074 score remains the honest official validation evidence.",
+  "chronological_full_ensemble_experiment": {
+    "test_rows": 6720,
+    "old_v8_fair_mae_eur_mwh": 34.156161460085684,
+    "v10_robust_50_50_mae_eur_mwh": 30.81810116508011,
+    "relative_mae_reduction_pct": 9.772937450557416,
+    "notes": "Both systems calibrated only on the preceding chronological block; V10 uses a neutral 50/50 direct-vs-spread centre and no static P50 intercept, then learns the live blend from settled outcomes."
+  }
+}
